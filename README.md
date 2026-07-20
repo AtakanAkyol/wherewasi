@@ -8,7 +8,7 @@ A cross-platform (Web & Android) TV series tracking application that helps users
 
 You can try the application directly without setting it up locally:
 
-* **Live Web Version:** [wherewasi.vercel.app](https://wherewasi.vercel.app) *(Kendi Vercel linkinle değiştir)*
+* **Live Web Version:** [wherewasi.vercel.app](https://wherewasi.vercel.app/)
 * **Test Account Email:** `test@mail.com`
 * **Test Account Password:** `test1234`
 
@@ -16,9 +16,9 @@ You can try the application directly without setting it up locally:
 
 ## 📸 Screenshots
 
-*(Add your screenshots here by dragging and dropping them into the GitHub editor)*
-![Search and Discover Screen](link-1-here)
-![AI Memory Scan Result](link-2-here)
+![Search and Discover Screen](./screenshots/1.png)
+![AI Memory Scan Result](./screenshots/2.png)
+![Mobile View](./screenshots/3.png)
 
 ## 🚀 Key Features
 
@@ -46,7 +46,7 @@ You can try the application directly without setting it up locally:
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/KULLANICI_ADIN/wherewasi.git](https://github.com/KULLANICI_ADIN/wherewasi.git)
+   git clone [https://github.com/AtakanAkyol/wherewasi.git](https://github.com/AtakanAkyol/wherewasi.git)
    ```
 2. Install dependencies:
    ```bash
@@ -70,7 +70,7 @@ Kullanıcıların yarım bıraktıkları veya "flu hatırladıkları" dizilerde 
 
 Projeyi lokal bilgisayarınıza kurmadan doğrudan deneyimleyebilirsiniz:
 
-* **Canlı Web Sürümü:** [wherewasi.vercel.app](https://wherewasi.vercel.app) *(Kendi Vercel linkinle değiştir)*
+* **Canlı Web Sürümü:** [wherewasi.vercel.app](https://wherewasi.vercel.app/)
 * **Test Hesabı Email:** `test@mail.com`
 * **Test Hesabı Şifre:** `test1234`
 
@@ -78,9 +78,9 @@ Projeyi lokal bilgisayarınıza kurmadan doğrudan deneyimleyebilirsiniz:
 
 ## 📸 Ekran Görüntüleri
 
-*(Ekran görüntülerini GitHub editörüne sürükleyip bırakarak buraya ekleyebilirsin)*
-![Arama ve Keşif Ekranı](link-1-buraya)
-![AI Hafıza Tarama Sonucu](link-2-buraya)
+![Arama ve Keşif Ekranı](./screenshots/1.png)
+![AI Hafıza Tarama Sonucu](./screenshots/2.png)
+![Mobil Görünüm](./screenshots/3.png)
 
 ## 🚀 Temel Özellikler
 
@@ -110,7 +110,7 @@ Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları i
 
 1. Repoyu bilgisayarınıza klonlayın:
    ```bash
-   git clone [https://github.com/KULLANICI_ADIN/wherewasi.git](https://github.com/KULLANICI_ADIN/wherewasi.git)
+   git clone [https://github.com/AtakanAkyol/wherewasi.git](https://github.com/AtakanAkyol/wherewasi.git)
    ```
 2. Gerekli kütüphaneleri yükleyin:
    ```bash
