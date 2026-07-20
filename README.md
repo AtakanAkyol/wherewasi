@@ -15,10 +15,15 @@ You can try the application directly without setting it up locally:
 *(Note: The test account has been granted direct access via Supabase, bypassing the email verification step.)*
 
 ## 📸 Screenshots
-
-![Search and Discover Screen](./screenshots/1.png)
-![AI Memory Scan Result](./screenshots/2.png)
-![Mobile View](./screenshots/3.png)
+<div align="center">
+  <img src="./screenshots/1.png" width="250" alt="Screen 1" />
+  <img src="./screenshots/2.png" width="250" alt="Screen 2" />
+  <img src="./screenshots/3.png" width="250" alt="Screen 3" />
+  <img src="./screenshots/4.png" width="250" alt="Screen 4" />
+  <img src="./screenshots/5.png" width="250" alt="Screen 5" />
+  <img src="./screenshots/6.png" width="250" alt="Screen 6" />
+  <img src="./screenshots/7.png" width="250" alt="Screen 7" />
+</div>
 
 ## 🚀 Key Features
 
@@ -77,10 +82,15 @@ Projeyi lokal bilgisayarınıza kurmadan doğrudan deneyimleyebilirsiniz:
 *(Not: Test hesabı, Supabase üzerinden e-posta doğrulama adımları atlanarak doğrudan erişime açılmıştır.)*
 
 ## 📸 Ekran Görüntüleri
-
-![Arama ve Keşif Ekranı](./screenshots/1.png)
-![AI Hafıza Tarama Sonucu](./screenshots/2.png)
-![Mobil Görünüm](./screenshots/3.png)
+<div align="center">
+  <img src="./screenshots/1.png" width="250" alt="Screen 1" />
+  <img src="./screenshots/2.png" width="250" alt="Screen 2" />
+  <img src="./screenshots/3.png" width="250" alt="Screen 3" />
+  <img src="./screenshots/4.png" width="250" alt="Screen 4" />
+  <img src="./screenshots/5.png" width="250" alt="Screen 5" />
+  <img src="./screenshots/6.png" width="250" alt="Screen 6" />
+  <img src="./screenshots/7.png" width="250" alt="Screen 7" />
+</div>
 
 ## 🚀 Temel Özellikler
 
