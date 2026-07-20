@@ -1,1 +1,124 @@
-WhereWasI? A cross-platform (Web & Android) TV series tracking application that helps users find where they left off or vaguely remember using AI. This project aims to deliver a Full-Stack SaaS architecture by combining modern web technologies with a native mobile experience. Live Demo & Test Account You can try the application directly without setting it up locally: Live Web Version: wherewasi.vercel.app (Kendi Vercel linkinle değiştir) Test Account Email: test@mail.com Test Account Password: test1234 (Note: The test account has been granted direct access via Supabase, bypassing the email verification step.) Screenshots (Add your screenshots here by dragging and dropping them into the GitHub editor) Key Features AI-Powered Episode Finder: The user inputs a vague memory from a show. The system analyzes this text using Gemini AI integration and TMDB API data to pinpoint the exact episode. Binary Search Manual Tracking: A filtering system that quickly determines where the user left off by narrowing down the pool of watched/unwatched episodes. Cross-Platform Architecture: Built with a Single Codebase using React, and wrapped with Capacitor to deliver both a modern web app and a hardware-accelerated Android APK. Secure Authentication: User data isolation is ensured using Supabase infrastructure and RLS (Row Level Security) policies. Tech Stack Frontend: React.js, Vite, Tailwind CSS Backend & API: Supabase (PostgreSQL), TMDB REST API, Google Gemini AI (gemini-flash) Mobile Integration: Capacitor.js (Android SDK 34) Engineering Decisions 1. Why Supabase over Firebase? To maintain relational data integrity and leverage the power of open-source SQL, PostgreSQL-based Supabase was chosen over NoSQL alternatives. 2. Why Hybrid (Capacitor) over Native? To minimize time-to-market and development costs, the Write once, run anywhere philosophy was adopted. UI design is centralized, preventing cross-platform inconsistencies. 3. Performance Optimization: A Debounce method is implemented in the search bar to prevent excessive requests to the TMDB API on every keystroke, avoiding Rate Limit issues. Local Setup 1. Clone the repository: git clone https://github.com/KULLANICI_ADIN/wherewasi.git 2. Install dependencies: cd wherewasi npm install 3. Create a .env file in the root directory and add your Supabase, TMDB, and Gemini API keys. 4. Start the development server: npm run dev Türkçe Sürüm (TR) Kullanıcıların yarım bıraktıkları veya flu hatırladıkları dizilerde nerede kaldıklarını yapay zeka desteğiyle bulmalarını sağlayan, cross-platform (Web & Android) bir dizi takip uygulaması. Bu proje, modern web teknolojileri ile yerel (native) mobil deneyimi birleştirerek tam kapsamlı bir Full-Stack SaaS mimarisi sunmayı hedeflemektedir. Canlı Demo & Test Hesabı Projeyi lokal bilgisayarınıza kurmadan doğrudan deneyimleyebilirsiniz: Canlı Web Sürümü: wherewasi.vercel.app (Kendi Vercel linkinle değiştir) Test Hesabı Email: test@mail.com Test Hesabı Şifre: test1234 (Not: Test hesabı, Supabase üzerinden e-posta doğrulama adımları atlanarak doğrudan erişime açılmıştır.) Ekran Görüntüleri (Ekran görüntülerini GitHub editörüne sürükleyip bırakarak buraya ekleyebilirsin) Temel Özellikler AI Destekli Bölüm Bulma: Kullanıcı diziden hatırladığı bulanık bir anıyı metin olarak girer. Sistem, Gemini AI entegrasyonu ve TMDB API verilerini kullanarak bu anıyı analiz eder ve en olası bölümü nokta atışı bulur. İkili Arama (Binary Search) Mantığı ile Manuel Takip: İzlenen/izlenmeyen bölümler arasında havuzu daraltarak kullanıcının kaldığı yeri hızlıca tespit eden filtreleme sistemi. Cross-Platform Mimarisi: Tek bir React kod tabanı (Single Codebase) kullanılarak, Capacitor aracılığıyla hem modern bir web uygulaması hem de donanım hızlandırmalı bir Android APK'sı oluşturulmuştur. Güvenli Kimlik Doğrulama: Supabase altyapısı ve RLS (Row Level Security) politikaları kullanılarak kullanıcı verilerinin izolasyonu sağlanmıştır. Kullanılan Teknolojiler (Tech Stack) Frontend: React.js, Vite, Tailwind CSS Backend & API: Supabase (PostgreSQL), TMDB REST API, Google Gemini AI (gemini-flash) Mobil Entegrasyon: Capacitor.js (Android SDK 34) Mimari ve Mühendislik Kararları 1. Neden Firebase yerine Supabase? Projelerdeki ilişkisel veri bütünlüğünü korumak ve açık kaynak (open-source) SQL gücünden faydalanmak adına NoSQL yerine PostgreSQL tabanlı Supabase tercih edilmiştir. 2. Neden Native yerine Hybrid (Capacitor)? Zaman ve efor maliyetini (Time-to-market) minimize etmek amacıyla Write once, run anywhere felsefesi benimsenmiştir. UI tasarımı tek bir merkezde toplanarak platformlar arası tasarım tutarsızlıkları önlenmiştir. 3. Performans Optimizasyonu: Kullanıcının her tuş vuruşunda TMDB API'sine istek gitmesini ve limitlere (Rate Limit) takılmayı önlemek amacıyla arama çubuğunda Debounce yöntemi kullanılmıştır. Kurulum (Lokal Ortam) Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz: 1. Repoyu bilgisayarınıza klonlayın: git clone https://github.com/KULLANICI_ADIN/wherewasi.git 2. Gerekli kütüphaneleri yükleyin: cd wherewasi npm install 3. Kök dizinde bir .env dosyası oluşturup Supabase, TMDB ve Gemini API anahtarlarınızı ekleyin. 4. Geliştirici sunucusunu başlatın: npm run dev
+# WhereWasI? 🎬
+
+[🇹🇷 Türkçe Sürüm İçin Aşağıya Kaydırın (Scroll down for Turkish)](#türkçe-sürüm-tr)
+
+A cross-platform (Web & Android) TV series tracking application that helps users find where they left off or "vaguely remember" using AI. This project aims to deliver a Full-Stack SaaS architecture by combining modern web technologies with a native mobile experience.
+
+## 🌐 Live Demo & Test Account
+
+You can try the application directly without setting it up locally:
+
+* **Live Web Version:** [wherewasi.vercel.app](https://wherewasi.vercel.app) *(Kendi Vercel linkinle değiştir)*
+* **Test Account Email:** `test@mail.com`
+* **Test Account Password:** `test1234`
+
+*(Note: The test account has been granted direct access via Supabase, bypassing the email verification step.)*
+
+## 📸 Screenshots
+
+*(Add your screenshots here by dragging and dropping them into the GitHub editor)*
+![Search and Discover Screen](link-1-here)
+![AI Memory Scan Result](link-2-here)
+
+## 🚀 Key Features
+
+* **AI-Powered Episode Finder:** The user inputs a vague memory from a show. The system analyzes this text using Gemini AI integration and TMDB API data to pinpoint the exact episode.
+* **Binary Search Manual Tracking:** A filtering system that quickly determines where the user left off by narrowing down the pool of watched/unwatched episodes.
+* **Cross-Platform Architecture:** Built with a Single Codebase using React, and wrapped with Capacitor to deliver both a modern web app and a hardware-accelerated Android APK.
+* **Secure Authentication:** User data isolation is ensured using Supabase infrastructure and RLS (Row Level Security) policies.
+
+## 🛠 Tech Stack
+
+* **Frontend:** React.js, Vite, Tailwind CSS
+* **Backend & API:** Supabase (PostgreSQL), TMDB REST API, Google Gemini AI (gemini-flash)
+* **Mobile Integration:** Capacitor.js (Android SDK 34)
+
+## 🏗 Engineering Decisions
+
+1. **Why Supabase over Firebase?**
+   To maintain relational data integrity and leverage the power of open-source SQL, PostgreSQL-based Supabase was chosen over NoSQL alternatives.
+2. **Why Hybrid (Capacitor) over Native?**
+   To minimize time-to-market and development costs, the "Write once, run anywhere" philosophy was adopted. UI design is centralized, preventing cross-platform inconsistencies.
+3. **Performance Optimization:**
+   A **Debounce** method is implemented in the search bar to prevent excessive requests to the TMDB API on every keystroke, avoiding Rate Limit issues.
+
+## 💻 Local Setup
+
+1. Clone the repository:
+   ```bash
+   git clone [https://github.com/KULLANICI_ADIN/wherewasi.git](https://github.com/KULLANICI_ADIN/wherewasi.git)
+   ```
+2. Install dependencies:
+   ```bash
+   cd wherewasi
+   npm install
+   ```
+3. Create a `.env` file in the root directory and add your Supabase, TMDB, and Gemini API keys.
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+---
+<br>
+
+# Türkçe Sürüm (TR) 🇹🇷
+
+Kullanıcıların yarım bıraktıkları veya "flu hatırladıkları" dizilerde nerede kaldıklarını yapay zeka desteğiyle bulmalarını sağlayan, cross-platform (Web & Android) bir dizi takip uygulaması. Bu proje, modern web teknolojileri ile yerel (native) mobil deneyimi birleştirerek tam kapsamlı bir "Full-Stack SaaS" mimarisi sunmayı hedeflemektedir.
+
+## 🌐 Canlı Demo & Test Hesabı
+
+Projeyi lokal bilgisayarınıza kurmadan doğrudan deneyimleyebilirsiniz:
+
+* **Canlı Web Sürümü:** [wherewasi.vercel.app](https://wherewasi.vercel.app) *(Kendi Vercel linkinle değiştir)*
+* **Test Hesabı Email:** `test@mail.com`
+* **Test Hesabı Şifre:** `test1234`
+
+*(Not: Test hesabı, Supabase üzerinden e-posta doğrulama adımları atlanarak doğrudan erişime açılmıştır.)*
+
+## 📸 Ekran Görüntüleri
+
+*(Ekran görüntülerini GitHub editörüne sürükleyip bırakarak buraya ekleyebilirsin)*
+![Arama ve Keşif Ekranı](link-1-buraya)
+![AI Hafıza Tarama Sonucu](link-2-buraya)
+
+## 🚀 Temel Özellikler
+
+* **AI Destekli Bölüm Bulma:** Kullanıcı diziden hatırladığı bulanık bir anıyı metin olarak girer. Sistem, Gemini AI entegrasyonu ve TMDB API verilerini kullanarak bu anıyı analiz eder ve en olası bölümü nokta atışı bulur.
+* **İkili Arama (Binary Search) Mantığı ile Manuel Takip:** İzlenen/izlenmeyen bölümler arasında havuzu daraltarak kullanıcının kaldığı yeri hızlıca tespit eden filtreleme sistemi.
+* **Cross-Platform Mimarisi:** Tek bir React kod tabanı (Single Codebase) kullanılarak, Capacitor aracılığıyla hem modern bir web uygulaması hem de donanım hızlandırmalı bir Android APK'sı oluşturulmuştur.
+* **Güvenli Kimlik Doğrulama:** Supabase altyapısı ve RLS (Row Level Security) politikaları kullanılarak kullanıcı verilerinin izolasyonu sağlanmıştır.
+
+## 🛠 Kullanılan Teknolojiler (Tech Stack)
+
+* **Frontend:** React.js, Vite, Tailwind CSS
+* **Backend & API:** Supabase (PostgreSQL), TMDB REST API, Google Gemini AI (gemini-flash)
+* **Mobil Entegrasyon:** Capacitor.js (Android SDK 34)
+
+## 🏗 Mimari ve Mühendislik Kararları
+
+1. **Neden Firebase yerine Supabase?**
+   Projelerdeki ilişkisel veri bütünlüğünü korumak ve açık kaynak (open-source) SQL gücünden faydalanmak adına NoSQL yerine PostgreSQL tabanlı Supabase tercih edilmiştir.
+2. **Neden Native yerine Hybrid (Capacitor)?**
+   Zaman ve efor maliyetini (Time-to-market) minimize etmek amacıyla "Write once, run anywhere" felsefesi benimsenmiştir. UI tasarımı tek bir merkezde toplanarak platformlar arası tasarım tutarsızlıkları önlenmiştir.
+3. **Performans Optimizasyonu:**
+   Kullanıcının her tuş vuruşunda TMDB API'sine istek gitmesini ve limitlere (Rate Limit) takılmayı önlemek amacıyla arama çubuğunda **Debounce** yöntemi kullanılmıştır.
+
+## 💻 Kurulum (Lokal Ortam)
+
+Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyebilirsiniz:
+
+1. Repoyu bilgisayarınıza klonlayın:
+   ```bash
+   git clone [https://github.com/KULLANICI_ADIN/wherewasi.git](https://github.com/KULLANICI_ADIN/wherewasi.git)
+   ```
+2. Gerekli kütüphaneleri yükleyin:
+   ```bash
+   cd wherewasi
+   npm install
+   ```
+3. Kök dizinde bir `.env` dosyası oluşturup Supabase, TMDB ve Gemini API anahtarlarınızı ekleyin.
+4. Geliştirici sunucusunu başlatın:
+   ```bash
+   npm run dev
+   ```
